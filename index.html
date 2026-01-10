@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willy AI Companion</title>
+    <title>AshaApp</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -56,7 +56,7 @@
         <div class="max-w-3xl mx-auto flex items-center">
             <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">W</div>
             <div>
-                <h1 class="text-xl font-bold text-gray-800">Willy AI Companion</h1>
+                <h1 class="text-xl font-bold text-gray-800">AshaApp</h1>
                 <p class="text-sm text-gray-500">Your trusted helper for farming, health, and more.</p>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <!-- Initial Message from Willy -->
             <div class="flex justify-start">
                 <div class="message-bubble willy-bubble">
-                    <p>Hello! I am Willy, your companion. You can ask me anything about farming, simple health tips, or anything else you need help with. How can I assist you today?</p>
+                    <p>Hello! I am Asha, your companion. You can ask me anything about studies, simple health tips, or anything else you need help with. How can I assist you today?</p>
                 </div>
             </div>
             <!-- Messages will be injected here -->
@@ -82,7 +82,7 @@
                 <input
                     type="text"
                     id="user-input"
-                    placeholder="Ask Willy your question..."
+                    placeholder="Ask Asha your question..."
                     class="flex-grow p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition duration-150"
                     onkeypress="if(event.key === 'Enter') document.getElementById('send-button').click()"
                 >
@@ -107,7 +107,7 @@
         // --- Gemini API Configuration ---
         // !!! CRITICAL STEP 1: API KEY INTEGRATED !!!
         // Your key has been inserted here. The app should now connect to the Gemini API when run locally.
-        const YOUR_API_KEY = "AIzaSyCQzxuKKVSQW1h1qgvHVDcIQXGP6DfrZZk"; 
+        const YOUR_API_KEY = "AIzaSyAtmfO_4FobOJ3T_MkZSbX0frGzZBYNojU"; 
 
         // Uses the environment key if available, otherwise falls back to the local variable.
         const API_KEY = typeof __api_key !== 'undefined' ? __api_key : YOUR_API_KEY;
@@ -116,8 +116,8 @@
         const MAX_RETRIES = 5;
 
         // The core persona instructions for Willy
-        const SYSTEM_INSTRUCTION = `You are Willy AI Companion, a friendly, knowledgeable, and reliable assistant specifically designed for people in rural communities. Your goal is to provide clear, practical, and easy-to-understand advice on a wide range of topics. Use simple, direct language and short paragraphs. Prioritize information related to:
-1. Farming & Agriculture: Basic crop care, pest management, soil health, simple irrigation.
+        const SYSTEM_INSTRUCTION = `You are AshaApp, a friendly, knowledgeable, and reliable assistant specifically designed for people in rural communities. Your goal is to provide clear, practical, and easy-to-understand advice on a wide range of topics. Use simple, direct language and short paragraphs. Prioritize information related to:
+1.Good for studies
 2. Health & Home Remedies: General wellness tips, common symptom management, and basic first aid (always advise seeking professional medical help for serious issues or if symptoms persist).
 3. General Knowledge: Simple explanations for technology, local government, education, etc.
 When answering, be supportive and encouraging. Always ground your advice in real-world, current data (using the provided search tool) to ensure accuracy. If you discuss health, include a strong disclaimer to see a doctor.`;
